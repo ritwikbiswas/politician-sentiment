@@ -216,7 +216,7 @@ class App extends Component {
     console.log(url_mongo);
     console.log('fetching mongo');
     var do_full_calculation = false;
-    fetch(url_mongo, { method: 'GET'}) // Make sure fetch is cross-origin, it's not by default (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) since the target URL of the API is a different 'origin' to our react app
+    fetch(url_mongo, { method: 'GET'}) // Make fetch cross-origin, it's not by default (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) since the target URL of the API is a different 'origin' to our react app
         .then((resp) => resp.json())
         .then((resp) => { // data input parameter is the result of the resolved resp.json() Promise (see https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
             console.log("response: " + resp)
